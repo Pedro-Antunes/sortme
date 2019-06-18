@@ -1,0 +1,133 @@
+body {
+	user-select: none;
+	background-color: white;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top: 10vh;
+}
+
+#title {
+	text-align: center;
+	font-size: 6vw;
+	font-family: Calibri Light;
+	line-height: 2.8vh;
+}
+ 
+#author {
+	font-size: 0.25em;
+	font-style: italic;
+	letter-spacing: 1vw;
+}
+
+#visualBox {
+	cursor: pointer;
+	position: fixed;
+	right: 2vw;
+	bottom: 3vh;
+	text-align: center;
+	background-color: black;
+	transition: transform 0.3s;
+	opacity: 0.8;
+	border-radius: 3px;
+	padding: 1vh 1vw 1vh 1vw;
+	color: white;
+	font-family: Calibri Light;
+	z-index: 1;
+
+}
+
+#visualBigText {
+	opacity: 1;
+	margin: 1vh 0vw 1vh 0vw;
+	font-size: 3vw;
+}
+
+#visualSmallText {
+	opacity: 1;
+	margin: 1vh 0vw 1vh 0vw;
+	font-size: 2vw;
+}
+
+#visualBox:hover {
+	transform: scale(1.05, 1.05);
+}
+
+#borderContainer {
+	border-bottom: 2px solid lightgrey;
+	border-top: 2px solid lightgray;
+	padding: 2vh 0vw 5vh 0vw;
+}
+
+.content {
+	cursor: pointer;
+	margin: 3vh 0vw 0vh 0vw;
+	transition: transform 0.3s;
+	background-color: rgb(207, 226, 226);
+	padding: 1.6vh 1.2vw 1.6vh 1.2vw;
+	border: 3px solid cadetblue;
+	border-radius: 4px;
+	font-size: 2vw;
+	font-family: Helvetica;
+}
+
+.content:hover {
+	transform: scale(1.05, 1.05);
+}
+
+.container {
+	text-align: left;
+	margin: auto;
+	width: 86vw;
+}
+
+.hiddenContent {
+	background-color: honeydew;
+	margin: auto;
+	width: 80vw;
+	padding: 1vh 1vw 3vh 1vw;
+	display: none;
+	border-style: solid;
+	border-color: grey;
+	border-width: 0px 2px 2px 2px;
+	border-radius: 0px 0px 4px 4px;
+	font-size: 1.4vw;
+	font-family: monospace;
+}
+
+.complexity_1 {
+	background-color: rgb(128, 255, 128);
+	padding: 3px;
+	border: 2px solid green;
+	border-radius: 5px;
+}
+
+.complexity_2 {
+	background-color: rgb(255, 128, 128);
+	padding: 3px;
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+.code {
+	padding-left: 1vw;
+	font-weight: normal;
+	text-align: left;
+}
+
+.number {
+	text-align: center;
+}
+
+table {
+	margin: auto;
+	width: 78vw;
+}
+
+tr:nth-child(odd) {
+	background: lavender;
+}
+
+tr:nth-child(even) {
+	background: darkgray;
+}
+

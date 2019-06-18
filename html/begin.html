@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CheatSheet - Documentation</title>
+		<link rel="icon" href="iconBars.ico">
+		<link type="text/css" rel="stylesheet" href="styles.css">
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function toggle(sortingType) {
+				if (document.getElementById(sortingType).style.display == "block") {
+					document.getElementById(sortingType).style.display = "none";
+				} else {
+					document.getElementById(sortingType).style.display = "block";
+				}
+			}
+		</script>
+			<h1 id="title">Sorting Algorithms CheatSheet<br><sub id="author">made by Pedro Antunes</sub></h1>
+			<!--<a href="visualizer.html" target="_blank"><div id="visualBox">
+				<h1 id="visualBigText">Visualize & Compare</h1>
+				<p id="visualSmallText"> the sorting algorithms</p>
+			</div></a>-->
+			<div id="borderContainer">
+				<div class="container">
+					<p class="content" onclick=toggle("insertionContent")>Insertion Sort</p>
+					<div id="insertionContent" class="hiddenContent">
+						<p>Time Complexity: <span class="complexity_2">Average: &Theta;(n<sup>2</sup>)</span> <span class="complexity_2">Worst: O(n<sup>2</sup>)</span></p>
+					<p>Info:</p>
+					<ul>
+						<li>Efficient when sorting nearly sorted lists</li>
+					</ul>
+					<p>Code Implementation:</p>
+					<div class="tableContainer">
+						<table>
+							<tr><th class="number">1</th><th class="code">function insertionSort(myArray) {</th></tr>
+							<tr><th class="number">2</th><th class="code">&nbsp;&nbsp;var temp;</th></tr>
+							<tr><th class="number">3</th><th class="code">&nbsp;&nbsp;for (var i = 0; i < myArray.length; i++) {</th></tr>
+							<tr><th class="number">4</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;for (var j = i; i >= 0; i--) {</th></tr>
+							<tr><th class="number">5</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (myArray[j] < myArray[j - 1]) {</th></tr>
+							<tr><th class="number">6</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp = myArray[j];</th></tr>
+							<tr><th class="number">7</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myArray[j] = myArray[j - 1];</th></tr>
+							<tr><th class="number">8</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myArray[j - 1] = temp;</th></tr>
+							<tr><th class="number">9</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</th></tr>
+							<tr><th class="number">10</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</th></tr>
+							<tr><th class="number">11</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">12</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">13</th><th class="code">&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">14</th><th class="code">};</th></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<p class="content" onclick=toggle("selectionContent")>Selection Sort</p>
+				<div id="selectionContent" class="hiddenContent">
+					<p>Time Complexity: <span class="complexity_2">Average: &Theta;(n<sup>2</sup>)</span> <span class="complexity_2">Worst: &Omicron;(n<sup>2</sup>)</span></p>
+					<p>Info:</p>
+					<ul>
+						<li>Similar to Insertion Sort, but less intuitive to code</li>
+					</ul>
+					<p>Code Implementation:</p>
+					<div class="tableContainer">
+						<table>
+							<tr><th class="number">1</th><th class="code">function selectionSort(myArray) {</th></tr>
+							<tr><th class="number">2</th><th class="code">&nbsp;&nbsp;var temp, a;</th></tr>
+							<tr><th class="number">3</th><th class="code">&nbsp;&nbsp;for (var i = 0; i < myArray.length; i++) {</th></tr>
+							<tr><th class="number">4</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;a = i;</th></tr>
+							<tr><th class="number">5</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;for(var j = i + 1; j < myArray.length; j++) {</th></tr>
+							<tr><th class="number">6</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (myArray[a] > myArray[j]) {</th></tr>
+							<tr><th class="number">7</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = j;</th></tr>
+							<tr><th class="number">8</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">9</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">10</th><th class="code">&nbsp;&nbsp;temp = myArray[i];</th></tr>
+							<tr><th class="number">11</th><th class="code">&nbsp;&nbsp;myArray[i] = myArray[a];</th></tr>
+							<tr><th class="number">12</th><th class="code">&nbsp;&nbsp;myArray[a] = temp;</th></tr>
+							<tr><th class="number">13</th><th class="code">&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">14</th><th class="code">};</th></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<p class="content" onclick=toggle("quickContent")>Quicksort</p>
+				<div id="quickContent" class="hiddenContent">
+					<p>Time Complexity: <span class="complexity_1">Average: &Omicron;(n &times; log<sub>2</sub>(n))</span> <span class="complexity_2">Worst: &Omicron;(n<sup>2</sup>)</span></p>
+					<p>Info:</p>
+					<ul>
+						<li>Very effiecient with large datasets</li>
+					</ul>
+					<p>Code Implementation:</p>
+					<div class="tableContainer">
+						<table>
+							<tr><th class="number">1</th><th class="code">#include &lt;bits/stdc++.h&gt;;</th></tr>
+							<tr><th class="number">2</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">3</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">4</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">5</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">6</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">7</th><th class="code">using namespace std;</th></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<p class="content" onclick=toggle("mergeContent")>Merge Sort</p>
+				<div id="mergeContent" class="hiddenContent">
+					<p>Time Complexity: <span class="complexity_1">Average: &Theta;(n<sup>2</sup>)</span> <span class="complexity_1">Worst: &Omicron;(n<sup>2</sup>)</span></p>
+					<p>Info:</p>
+					<ul>
+						<li>Consistent time complexity - nearly always &Omicron;(n &times; log<sub>2</sub>(n))</li>
+					</ul>
+					<p>Code Implementation:</p>
+					<div class="tableContainer">
+						<table>
+							<tr><th class="number">1</th><th class="code">#include &lt;bits/stdc++.h&gt;;</th></tr>
+							<tr><th class="number">2</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">3</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">4</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">5</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">6</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">7</th><th class="code">using namespace std;</th></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
