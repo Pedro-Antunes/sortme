@@ -10,5 +10,5 @@ app.get('/', function(req, res){
 });
 
 server.listen(port, '0.0.0.0',function(){
-    console.log('OLAAAAA, ESTOU A FUNCIONAR POR AGORA');
+    //console.log('OLAAAAA, ESTOU A FUNCIONAR POR AGORA');
 });
