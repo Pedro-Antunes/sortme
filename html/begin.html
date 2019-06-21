@@ -46,7 +46,7 @@
 							<tr><th class="number">11</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
 							<tr><th class="number">12</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
 							<tr><th class="number">13</th><th class="code">&nbsp;&nbsp;}</th></tr>
-							<tr><th class="number">14</th><th class="code">};</th></tr>
+							<tr><th class="number">14</th><th class="code">}</th></tr>
 						</table>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 							<tr><th class="number">11</th><th class="code">&nbsp;&nbsp;myArray[i] = myArray[a];</th></tr>
 							<tr><th class="number">12</th><th class="code">&nbsp;&nbsp;myArray[a] = temp;</th></tr>
 							<tr><th class="number">13</th><th class="code">&nbsp;&nbsp;}</th></tr>
-							<tr><th class="number">14</th><th class="code">};</th></tr>
+							<tr><th class="number">14</th><th class="code">}</th></tr>
 						</table>
 					</div>
 				</div>
@@ -110,31 +110,40 @@
 							<tr><th class="number">16</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recursion(p, o - 1);</th></tr>
 							<tr><th class="number">17</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recursion(o + 1, r);</th></tr>
 							<tr><th class="number">18</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
-							<tr><th class="number">19</th><th class="code">&nbsp;&nbsp;};</th></tr>
+							<tr><th class="number">19</th><th class="code">&nbsp;&nbsp;}</th></tr>
 							<tr><th class="number">20</th><th class="code">&nbsp;&nbsp;recursion(0, myArray.length - 1);</th></tr>
-							<tr><th class="number">21</th><th class="code">};</th></tr>
+							<tr><th class="number">21</th><th class="code">}</th></tr>
 						</table>
 					</div>
 				</div>
 			</div>
 			<div class="container">
-				<p class="content" onclick=toggle("mergeContent")>Merge Sort</p>
-				<div id="mergeContent" class="hiddenContent">
-					<p>Time Complexity: <span class="complexity_1">Average: &Theta;(n<sup>2</sup>)</span> <span class="complexity_1">Worst: &Omicron;(n<sup>2</sup>)</span></p>
+				<p class="content" onclick=toggle("countingContent")>Counting Sort</p>
+				<div id="countingContent" class="hiddenContent">
+					<p>Time Complexity: <span class="complexity_1">Average: &Theta;(n + r)</span> <span class="complexity_2">Worst: &Omicron;(n + r)</span></p>
 					<p>Info:</p>
 					<ul>
-						<li>Consistent time complexity - nearly always &Omicron;(n &times; log<sub>2</sub>(n))</li>
+						<li>Really good with small-ranged datasets</li>
 					</ul>
 					<p>Code Implementation:</p>
 					<div class="tableContainer">
 						<table>
-							<tr><th class="number">1</th><th class="code">#include &lt;bits/stdc++.h&gt;;</th></tr>
-							<tr><th class="number">2</th><th class="code">using namespace std;</th></tr>
-							<tr><th class="number">3</th><th class="code">using namespace std;</th></tr>
-							<tr><th class="number">4</th><th class="code">using namespace std;</th></tr>
-							<tr><th class="number">5</th><th class="code">using namespace std;</th></tr>
-							<tr><th class="number">6</th><th class="code">using namespace std;</th></tr>
-							<tr><th class="number">7</th><th class="code">using namespace std;</th></tr>
+							<tr><th class="number">1</th><th class="code">function countingSort(myArray) {</th></tr>
+							<tr><th class="number">2</th><th class="code">&nbsp;&nbsp;var p = 0;</th></tr>
+							<tr><th class="number">3</th><th class="code">&nbsp;&nbsp;var count = [];</th></tr>
+							<tr><th class="number">4</th><th class="code">&nbsp;&nbsp;for (var i = 0; i <= maxValue; i++) {</th></tr>
+							<tr><th class="number">5</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;count[i] = 0;</th></tr>
+							<tr><th class="number">6</th><th class="code">&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">7</th><th class="code">&nbsp;&nbsp;for (var j = 0; j < myArray.length; j++) {</th></tr>
+							<tr><th class="number">8</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;count[myArray[j]]++;</th></tr>
+							<tr><th class="number">9</th><th class="code">&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">10</th><th class="code">&nbsp;&nbsp;for (var k = 0; k < count.length; k++) {</th></tr>
+							<tr><th class="number">11</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;for (var l = 0; l < count[k]; l++) {</th></tr>
+							<tr><th class="number">12</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myArray[p] = k;</th></tr>
+							<tr><th class="number">13</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p++;</th></tr>
+							<tr><th class="number">14</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">15</th><th class="code">&nbsp;&nbsp;}</th></tr>
+							<tr><th class="number">16</th><th class="code">}</th></tr>
 						</table>
 					</div>
 				</div>
@@ -161,7 +170,7 @@
 							<tr><th class="number">9</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
 							<tr><th class="number">10</th><th class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</th></tr>
 							<tr><th class="number">11</th><th class="code">&nbsp;&nbsp;}</th></tr>
-							<tr><th class="number">12</th><th class="code">};</th></tr>
+							<tr><th class="number">12</th><th class="code">}</th></tr>
 						</table>
 					</div>
 				</div>
